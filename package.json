@@ -1,7 +1,7 @@
 {
   "name": "@felix-hz/seamount",
   "version": "0.1.0",
-  "description": "Seamount, the design system behind my sites and apps: tokens, fonts, vanilla CSS and React components on Radix.",
+  "description": "A design system with tokens, fonts, CSS and React components on Radix.",
   "keywords": [
     "design-system",
     "css",
