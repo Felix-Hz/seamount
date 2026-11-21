@@ -7,7 +7,14 @@ import { defineConfig } from "vitest/config";
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
+const aliases = {
+  "@felix-hz/seamount-react": path.join(dirname, "packages/seamount-react/src/index.ts"),
+  "@felix-hz/seamount/format": path.join(dirname, "packages/seamount/src/lib/format.ts"),
+  "@felix-hz/seamount/theme": path.join(dirname, "packages/seamount/src/lib/theme.ts"),
+};
+
 const storybookProject = (theme: "light" | "dark") => ({
+  resolve: { alias: aliases },
   plugins: [storybookTest({ configDir: path.join(dirname, ".storybook"), initialGlobals: { theme } })],
   test: {
     name: `storybook-${theme}`,
@@ -21,12 +28,13 @@ export default defineConfig({
     projects: [
       {
         plugins: [react()],
+        resolve: { alias: aliases },
         test: {
           name: "unit",
           environment: "happy-dom",
           globals: true,
           setupFiles: ["./test/setup.ts"],
-          include: ["src/**/*.test.{ts,tsx}"],
+          include: ["packages/*/src/**/*.test.{ts,tsx}"],
         },
       },
       storybookProject("light"),

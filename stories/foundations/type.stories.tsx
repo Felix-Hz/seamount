@@ -1,6 +1,6 @@
+import { Section, SpecList } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import type * as React from "react";
-import { Section, SpecList } from "../../src/react";
 
 const meta: Meta = { title: "Foundations/Type", tags: ["!autodocs"] };
 export default meta;

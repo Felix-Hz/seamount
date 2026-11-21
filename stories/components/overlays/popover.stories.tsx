@@ -1,6 +1,6 @@
+import { Button, Popover, PopoverClose, PopoverContent, PopoverTrigger, SpecList } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { expect, waitFor, within } from "storybook/test";
-import { Button, Popover, PopoverClose, PopoverContent, PopoverTrigger, SpecList } from "../../../src/react";
 
 const meta: Meta<typeof Popover> = {
   title: "Components/Overlays/Popover",

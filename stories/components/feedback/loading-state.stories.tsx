@@ -1,5 +1,5 @@
+import { LoadingState } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { LoadingState } from "../../../src/react";
 
 const meta: Meta<typeof LoadingState> = {
   title: "Components/Feedback/LoadingState",

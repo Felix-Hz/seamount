@@ -1,6 +1,6 @@
+import { Button, Section } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { expect } from "storybook/test";
-import { Button, Section } from "../../../src/react";
 
 const body = <p style={{ color: "var(--sm-ink-2)" }}>The heading toggles; the chevron turns 90°.</p>;
 const meta: Meta<typeof Section> = {

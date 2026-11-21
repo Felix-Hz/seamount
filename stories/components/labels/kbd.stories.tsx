@@ -1,5 +1,5 @@
+import { Kbd } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Kbd } from "../../../src/react";
 
 const meta: Meta<typeof Kbd> = { title: "Components/Labels/Kbd", component: Kbd, args: { children: "Esc" } };
 export default meta;

@@ -1,5 +1,5 @@
+import { SpecItem, SpecList } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { SpecItem, SpecList } from "../../../src/react";
 
 const meta: Meta<typeof SpecList> = {
   title: "Components/Layout/SpecList",

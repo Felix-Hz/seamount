@@ -1,0 +1,58 @@
+{
+  "name": "@felix-hz/seamount",
+  "version": "0.1.1",
+  "homepage": "https://github.com/Felix-Hz/seamount#readme",
+  "bugs": {
+    "url": "https://github.com/Felix-Hz/seamount/issues"
+  },
+  "license": "MIT",
+  "author": "Félix Hernández Vieyra (https://felix-hzv.dev)",
+  "type": "module",
+  "files": [
+    "dist",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "description": "A design system in plain CSS: tokens, fonts, components and a Tailwind 4 theme.",
+  "keywords": [
+    "design-system",
+    "css",
+    "tailwind"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Felix-Hz/seamount.git",
+    "directory": "packages/seamount"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    "./format": {
+      "types": "./dist/lib/format.d.ts",
+      "default": "./dist/lib/format.js"
+    },
+    "./theme": {
+      "types": "./dist/lib/theme.d.ts",
+      "default": "./dist/lib/theme.js"
+    },
+    "./styles.css": "./dist/css/seamount.css",
+    "./tokens.css": "./dist/css/tokens.css",
+    "./fonts.css": "./dist/css/fonts.css",
+    "./base.css": "./dist/css/base.css",
+    "./components.css": "./dist/css/components.css",
+    "./tailwind.css": "./dist/css/tailwind.css",
+    "./fonts/*": "./dist/fonts/*",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsdown && node scripts/build-css.mjs",
+    "check:package": "publint --strict && attw --pack . --profile esm-only --entrypoints ./format ./theme"
+  }
+}

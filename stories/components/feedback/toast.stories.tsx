@@ -1,6 +1,6 @@
+import { Button, Toaster, toast } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { expect, waitFor, within } from "storybook/test";
-import { Button, Toaster, toast } from "../../../src/react";
 import { line } from "../../shared";
 
 const meta: Meta<typeof Toaster> = {

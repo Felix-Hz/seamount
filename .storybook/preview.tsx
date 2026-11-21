@@ -1,7 +1,6 @@
+import { Toaster, TooltipProvider } from "@felix-hz/seamount-react";
 import type { Decorator, Preview } from "@storybook/react-vite";
 import { useEffect } from "react";
-import { TooltipProvider } from "../src/react/overlay";
-import { Toaster } from "../src/react/toast";
 import { ThemedDocsContainer } from "./docs-container";
 import "./preview.css";
 

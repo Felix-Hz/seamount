@@ -1,6 +1,6 @@
+import { Label, SegmentedControl, useTheme } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import type * as React from "react";
-import { Label, SegmentedControl, useTheme } from "../../src/react";
 
 function Demo(): React.JSX.Element {
   const { choice, resolved, setChoice } = useTheme({ storageKey: "seamount-storybook-theme" });

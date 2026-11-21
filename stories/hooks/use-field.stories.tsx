@@ -1,6 +1,6 @@
+import { Field, useField, useFieldControlProps } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import type * as React from "react";
-import { Field, useField, useFieldControlProps } from "../../src/react";
 
 function Control(): React.JSX.Element {
   const field = useField();

@@ -1,7 +1,7 @@
+import { Field, Input } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import * as React from "react";
 import { expect } from "storybook/test";
-import { Field, Input } from "../../../src/react";
 
 const meta: Meta<typeof Field> = {
   title: "Components/Forms/Field",

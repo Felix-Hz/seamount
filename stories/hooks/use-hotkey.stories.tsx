@@ -1,7 +1,7 @@
+import { Field, Input, Kbd, Label, useHotkey } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import * as React from "react";
 import { expect } from "storybook/test";
-import { Field, Input, Kbd, Label, useHotkey } from "../../src/react";
 
 function Demo(): React.JSX.Element {
   const [count, setCount] = React.useState(0);

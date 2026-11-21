@@ -1,6 +1,6 @@
+import { Label, Section } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import type * as React from "react";
-import { Label, Section } from "../../src/react";
 
 const meta: Meta = { title: "Foundations/Colour", tags: ["!autodocs"] };
 export default meta;

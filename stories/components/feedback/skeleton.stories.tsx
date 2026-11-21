@@ -1,5 +1,5 @@
+import { Skeleton } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Skeleton } from "../../../src/react";
 
 const meta: Meta<typeof Skeleton> = {
   title: "Components/Feedback/Skeleton",

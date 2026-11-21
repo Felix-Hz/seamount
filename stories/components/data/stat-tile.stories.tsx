@@ -1,5 +1,5 @@
+import { StatTile } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { StatTile } from "../../../src/react";
 
 const meta: Meta<typeof StatTile> = {
   title: "Components/Data/StatTile",

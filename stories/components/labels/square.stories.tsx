@@ -1,5 +1,5 @@
+import { Square } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Square } from "../../../src/react";
 import { line } from "../../shared";
 
 const meta: Meta<typeof Square> = {

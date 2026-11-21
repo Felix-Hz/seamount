@@ -1,8 +1,8 @@
 @layer theme, base, components, utilities;
-@import "../src/css/tokens.css";
-@import "../src/css/fonts.css";
-@import "../src/css/base.css";
-@import "../src/css/components.css";
+@import "../packages/seamount/src/css/tokens.css";
+@import "../packages/seamount/src/css/fonts.css";
+@import "../packages/seamount/src/css/base.css";
+@import "../packages/seamount/src/css/components.css";
 
 .sb-show-main.sb-main-padded {
   padding: 2rem;

@@ -1,5 +1,5 @@
+import { Sparkline } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Sparkline } from "../../../src/react";
 
 const meta: Meta<typeof Sparkline> = {
   title: "Components/Data/Sparkline",

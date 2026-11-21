@@ -1,6 +1,6 @@
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { expect } from "storybook/test";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../../src/react";
 
 const meta: Meta<typeof Tabs> = {
   title: "Components/Layout/Tabs",

@@ -1,5 +1,5 @@
+import { Button, Row, Switch } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Button, Row, Switch } from "../../../src/react";
 
 const meta: Meta<typeof Row> = {
   title: "Components/Layout/Row",
