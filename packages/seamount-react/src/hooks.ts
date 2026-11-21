@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
   applyTheme,
   type ResolvedTheme,
@@ -6,7 +5,8 @@ import {
   storeThemeChoice,
   type ThemeChoice,
   watchSystemTheme,
-} from "../lib/theme";
+} from "@felix-hz/seamount/theme";
+import * as React from "react";
 
 const isTyping = (target: EventTarget | null): boolean => {
   if (!(target instanceof HTMLElement)) return false;

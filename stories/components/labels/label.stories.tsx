@@ -1,5 +1,5 @@
+import { Label } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Label } from "../../../src/react";
 
 const meta: Meta<typeof Label> = {
   title: "Components/Labels/Label",

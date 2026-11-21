@@ -1,5 +1,5 @@
+import { Table } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Table } from "../../../src/react";
 
 const rows = [
   ["Fri 20 Nov", "Countdown Ponsonby", "Groceries", "−84.12"],

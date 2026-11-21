@@ -1,5 +1,5 @@
+import { Separator } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Separator } from "../../../src/react";
 
 const meta: Meta<typeof Separator> = {
   title: "Components/Layout/Separator",

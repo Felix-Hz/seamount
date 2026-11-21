@@ -1,5 +1,5 @@
+import { Tag } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Tag } from "../../../src/react";
 
 const meta: Meta<typeof Tag> = {
   title: "Components/Labels/Tag",

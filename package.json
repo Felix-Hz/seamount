@@ -1,64 +1,13 @@
 {
-  "name": "@felix-hz/seamount",
-  "version": "0.1.1",
-  "description": "A design system with tokens, fonts, CSS and React components on Radix.",
-  "keywords": [
-    "design-system",
-    "css",
-    "react",
-    "radix",
-    "tailwind"
-  ],
-  "homepage": "https://github.com/Felix-Hz/seamount#readme",
-  "bugs": {
-    "url": "https://github.com/Felix-Hz/seamount/issues"
-  },
-  "license": "MIT",
-  "author": "Félix Hernández Vieyra (https://felix-hzv.dev)",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Felix-Hz/seamount.git"
-  },
+  "name": "seamount-workspace",
+  "private": true,
   "type": "module",
-  "sideEffects": [
-    "**/*.css"
-  ],
-  "files": [
-    "dist",
-    "THIRD_PARTY_NOTICES.md"
-  ],
-  "exports": {
-    ".": {
-      "types": "./dist/react/index.d.ts",
-      "default": "./dist/react/index.js"
-    },
-    "./format": {
-      "types": "./dist/lib/format.d.ts",
-      "default": "./dist/lib/format.js"
-    },
-    "./theme": {
-      "types": "./dist/lib/theme.d.ts",
-      "default": "./dist/lib/theme.js"
-    },
-    "./styles.css": "./dist/css/seamount.css",
-    "./tokens.css": "./dist/css/tokens.css",
-    "./fonts.css": "./dist/css/fonts.css",
-    "./base.css": "./dist/css/base.css",
-    "./components.css": "./dist/css/components.css",
-    "./tailwind.css": "./dist/css/tailwind.css",
-    "./fonts/*": "./dist/fonts/*",
-    "./package.json": "./package.json"
-  },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  },
   "engines": {
     "node": ">=20.19"
   },
   "packageManager": "pnpm@12.21.0",
   "scripts": {
-    "build": "tsdown && node scripts/build-css.mjs",
+    "build": "pnpm -r build",
     "dev": "storybook dev -p 6006",
     "storybook:build": "storybook build -o storybook-static",
     "lint": "biome check .",
@@ -67,19 +16,13 @@
     "test": "vitest run --project unit",
     "test:watch": "vitest --project unit",
     "test:storybook": "vitest run --project 'storybook-*'",
-    "check:package": "publint --strict && attw --pack . --profile esm-only --entrypoints . ./format ./theme",
+    "check:package": "pnpm -r check:package",
     "changeset": "changeset",
-    "release": "pnpm build && npm publish"
-  },
-  "peerDependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
-  "dependencies": {
-    "clsx": "^2.1.1",
-    "radix-ui": "^1.8.1"
+    "release": "node scripts/publish.mjs"
   },
   "devDependencies": {
+    "@felix-hz/seamount": "workspace:*",
+    "@felix-hz/seamount-react": "workspace:*",
     "@arethetypeswrong/cli": "^0.18.5",
     "@biomejs/biome": "^2.6.8",
     "@changesets/cli": "^3.0.3",
@@ -104,6 +47,8 @@
     "tsdown": "^0.23.7",
     "typescript": "~5.9.3",
     "vite": "^8.3.8",
-    "vitest": "^5.1.1"
+    "vitest": "^5.1.1",
+    "clsx": "^2.1.1",
+    "radix-ui": "^1.8.1"
   }
 }

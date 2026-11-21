@@ -1,6 +1,3 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
-import type * as React from "react";
-import { expect, waitFor, within } from "storybook/test";
 import {
   Button,
   Dialog,
@@ -12,7 +9,10 @@ import {
   DialogTrigger,
   Field,
   Input,
-} from "../../../src/react";
+} from "@felix-hz/seamount-react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import type * as React from "react";
+import { expect, waitFor, within } from "storybook/test";
 
 function Body({ sheet, size }: { sheet?: boolean; size?: "md" | "lg" }): React.JSX.Element {
   return (

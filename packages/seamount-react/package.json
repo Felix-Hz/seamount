@@ -1,0 +1,67 @@
+{
+  "name": "@felix-hz/seamount-react",
+  "version": "0.1.1",
+  "homepage": "https://github.com/Felix-Hz/seamount#readme",
+  "bugs": {
+    "url": "https://github.com/Felix-Hz/seamount/issues"
+  },
+  "license": "MIT",
+  "author": "Félix Hernández Vieyra (https://felix-hzv.dev)",
+  "type": "module",
+  "files": [
+    "dist",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "description": "React components for the Seamount design system, built on Radix.",
+  "keywords": [
+    "design-system",
+    "react",
+    "radix",
+    "components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Felix-Hz/seamount.git",
+    "directory": "packages/seamount-react"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./format": {
+      "types": "./dist/format.d.ts",
+      "default": "./dist/format.js"
+    },
+    "./theme": {
+      "types": "./dist/theme.d.ts",
+      "default": "./dist/theme.js"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./tailwind.css": "./dist/tailwind.css",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsdown && node -e \"const f=require('node:fs');f.writeFileSync('dist/styles.css','@import \\\"@felix-hz/seamount/styles.css\\\";\\n');f.writeFileSync('dist/tailwind.css','@import \\\"@felix-hz/seamount/tailwind.css\\\";\\n')\"",
+    "check:package": "publint --strict && attw --pack . --profile esm-only --entrypoints . ./format ./theme"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {
+    "@felix-hz/seamount": "workspace:*",
+    "clsx": "^2.1.1",
+    "radix-ui": "^1.8.1"
+  }
+}

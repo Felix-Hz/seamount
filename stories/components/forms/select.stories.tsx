@@ -1,5 +1,3 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
-import { expect, within } from "storybook/test";
 import {
   Field,
   Select,
@@ -10,7 +8,9 @@ import {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
-} from "../../../src/react";
+} from "@felix-hz/seamount-react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof Select> = {
   title: "Components/Forms/Select",

@@ -6,7 +6,15 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!dist", "!storybook-static", "!src/fonts", "!.changeset/*.md", "!CHANGELOG.md"]
+    "includes": [
+      "**",
+      "!dist",
+      "!storybook-static",
+      "!packages/seamount/src/fonts",
+      "!**/dist",
+      "!.changeset/*.md",
+      "!CHANGELOG.md"
+    ]
   },
   "formatter": {
     "indentStyle": "space",
@@ -39,7 +47,7 @@
   },
   "overrides": [
     {
-      "includes": ["src/css/base.css"],
+      "includes": ["packages/seamount/src/css/base.css"],
       "linter": {
         "rules": {
           "complexity": {
@@ -49,7 +57,7 @@
       }
     },
     {
-      "includes": ["src/css/**"],
+      "includes": ["packages/seamount/src/css/**"],
       "linter": {
         "rules": {
           "style": {

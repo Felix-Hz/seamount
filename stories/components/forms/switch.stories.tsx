@@ -1,6 +1,6 @@
+import { Switch } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { expect, fn } from "storybook/test";
-import { Switch } from "../../../src/react";
 
 const meta: Meta<typeof Switch> = {
   title: "Components/Forms/Switch",

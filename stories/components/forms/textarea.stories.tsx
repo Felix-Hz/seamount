@@ -1,5 +1,5 @@
+import { Field, Textarea } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Field, Textarea } from "../../../src/react";
 
 const meta: Meta<typeof Textarea> = {
   title: "Components/Forms/Textarea",

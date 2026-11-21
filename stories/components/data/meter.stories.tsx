@@ -1,5 +1,5 @@
+import { Meter } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Meter } from "../../../src/react";
 
 const meta: Meta<typeof Meter> = {
   title: "Components/Data/Meter",

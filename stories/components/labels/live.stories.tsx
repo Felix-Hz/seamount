@@ -1,5 +1,5 @@
+import { Live } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Live } from "../../../src/react";
 
 const meta: Meta<typeof Live> = {
   title: "Components/Labels/Live",

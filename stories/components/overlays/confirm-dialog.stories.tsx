@@ -1,6 +1,6 @@
+import { Button, ConfirmDialog } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { expect, fn, within } from "storybook/test";
-import { Button, ConfirmDialog } from "../../../src/react";
 
 const meta: Meta<typeof ConfirmDialog> = {
   title: "Components/Overlays/ConfirmDialog",

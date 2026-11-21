@@ -1,6 +1,6 @@
+import { Banner, Button } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { expect, fn } from "storybook/test";
-import { Banner, Button } from "../../../src/react";
 
 const meta: Meta<typeof Banner> = {
   title: "Components/Feedback/Banner",

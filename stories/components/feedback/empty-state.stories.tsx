@@ -1,5 +1,5 @@
+import { Button, EmptyState } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Button, EmptyState } from "../../../src/react";
 
 const meta: Meta<typeof EmptyState> = {
   title: "Components/Feedback/EmptyState",

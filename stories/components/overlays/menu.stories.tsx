@@ -1,6 +1,3 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
-import * as React from "react";
-import { expect, fn, within } from "storybook/test";
 import {
   Button,
   Menu,
@@ -13,7 +10,10 @@ import {
   MenuRadioItem,
   MenuSeparator,
   MenuTrigger,
-} from "../../../src/react";
+} from "@felix-hz/seamount-react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import * as React from "react";
+import { expect, fn, within } from "storybook/test";
 
 const onExport = fn();
 

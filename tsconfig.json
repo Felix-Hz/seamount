@@ -13,7 +13,13 @@
     "declaration": true,
     "skipLibCheck": true,
     "noEmit": true,
-    "types": ["vitest/globals", "node"]
+    "types": ["vitest/globals", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "@felix-hz/seamount-react": ["packages/seamount-react/src/index.ts"],
+      "@felix-hz/seamount/format": ["packages/seamount/src/lib/format.ts"],
+      "@felix-hz/seamount/theme": ["packages/seamount/src/lib/theme.ts"]
+    }
   },
-  "include": ["src", "stories", "test", ".storybook"]
+  "include": ["packages/*/src", "stories", "test", ".storybook"]
 }

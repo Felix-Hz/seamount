@@ -4,10 +4,10 @@ import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
-const css = readFileSync(join(import.meta.dirname, "components.css"), "utf8");
+const css = readFileSync(join(import.meta.dirname, "..", "..", "seamount", "src", "css", "components.css"), "utf8");
 const defined = new Set([...css.matchAll(/\.(sm-[a-z0-9-]+)/g)].map((m) => m[1]));
 
-const reactDir = join(import.meta.dirname, "..", "react");
+const reactDir = import.meta.dirname;
 const used = new Map<string, string>();
 for (const file of readdirSync(reactDir).filter((f) => f.endsWith(".tsx") && !f.includes(".test."))) {
   const source = readFileSync(join(reactDir, file), "utf8");

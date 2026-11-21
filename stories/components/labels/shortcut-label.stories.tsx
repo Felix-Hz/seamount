@@ -1,5 +1,5 @@
+import { ShortcutLabel } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { ShortcutLabel } from "../../../src/react";
 
 const meta: Meta<typeof ShortcutLabel> = {
   title: "Components/Labels/ShortcutLabel",

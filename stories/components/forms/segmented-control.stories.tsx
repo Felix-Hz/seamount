@@ -1,7 +1,7 @@
+import { SegmentedControl } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import * as React from "react";
 import { expect } from "storybook/test";
-import { SegmentedControl } from "../../../src/react";
 
 type Period = "week" | "month" | "quarter" | "year";
 const options = [

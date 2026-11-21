@@ -1,6 +1,6 @@
+import { Button, Tooltip } from "@felix-hz/seamount-react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { expect, within } from "storybook/test";
-import { Button, Tooltip } from "../../../src/react";
 
 const meta: Meta<typeof Tooltip> = {
   title: "Components/Overlays/Tooltip",
