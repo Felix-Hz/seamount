@@ -1,0 +1,33 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Foundations/Introduction" />
+
+# Seamount
+
+A design system in CSS and React. One stylesheet works with or without React, so a plain HTML page and a React app can look the same.
+
+## Principles
+
+- **One ink.** Cobalt is the only interface colour, on one or two things per screen.
+- **State in words.** Status is told by a word and a mark, never by colour alone.
+- **One job per typeface.** Newsreader for reading, Instrument Sans for the interface, JetBrains Mono for labels and figures, Departure Mono for the wordmark.
+- **Thin rules, no decoration.** Radii stop at 4 px. Shadows are for floating layers only.
+
+## Using this Storybook
+
+- **Foundations** covers colour and type.
+- **Components** has a docs page for each component, with its props and variants.
+- **Hooks** covers the React hooks.
+
+Use the toolbar to switch theme and viewport. The Accessibility panel runs axe on the current story.
+
+## Install
+
+```sh
+npm install @felix-hz/seamount
+```
+
+```tsx
+import "@felix-hz/seamount/styles.css";
+import { Button } from "@felix-hz/seamount";
+```

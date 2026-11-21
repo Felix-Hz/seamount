@@ -1,0 +1,21 @@
+import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+import * as Stories from "./use-theme.stories";
+
+<Meta of={Stories} />
+
+# useTheme
+
+Reads, stores and applies System, Light or Dark. System follows the OS live.
+
+```tsx
+const { choice, resolved, setChoice } = useTheme();
+```
+
+<Canvas of={Stories.Default} />
+
+| Option | Type | Purpose |
+| --- | --- | --- |
+| `storageKey` | `string` | Where the choice is saved |
+| `classes` | `boolean` | Also toggles `.dark` and `.light` on `<html>` |
+
+Inline `themeScript()` from `@felix-hz/seamount/theme` in `<head>` to avoid a flash on load.
