@@ -1,0 +1,102 @@
+{
+  "name": "@felix-hz/seamount",
+  "version": "0.1.0",
+  "description": "Seamount, the design system behind my sites and apps: tokens, fonts, vanilla CSS and React components on Radix.",
+  "keywords": [
+    "design-system",
+    "css",
+    "react",
+    "radix",
+    "tailwind"
+  ],
+  "homepage": "https://github.com/Felix-Hz/seamount#readme",
+  "bugs": {
+    "url": "https://github.com/Felix-Hz/seamount/issues"
+  },
+  "license": "MIT",
+  "author": "Félix Hernández Vieyra (https://felix-hzv.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Felix-Hz/seamount.git"
+  },
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/react/index.d.ts",
+      "default": "./dist/react/index.js"
+    },
+    "./format": {
+      "types": "./dist/lib/format.d.ts",
+      "default": "./dist/lib/format.js"
+    },
+    "./theme": {
+      "types": "./dist/lib/theme.d.ts",
+      "default": "./dist/lib/theme.js"
+    },
+    "./styles.css": "./dist/css/seamount.css",
+    "./tokens.css": "./dist/css/tokens.css",
+    "./fonts.css": "./dist/css/fonts.css",
+    "./base.css": "./dist/css/base.css",
+    "./components.css": "./dist/css/components.css",
+    "./tailwind.css": "./dist/css/tailwind.css",
+    "./fonts/*": "./dist/fonts/*",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "packageManager": "pnpm@12.21.0",
+  "scripts": {
+    "build": "tsdown && node scripts/build-css.mjs",
+    "dev": "storybook dev -p 6006",
+    "storybook:build": "storybook build -o storybook-static",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check:package": "publint --strict && attw --pack . --profile esm-only --entrypoints . ./format ./theme",
+    "changeset": "changeset",
+    "release": "pnpm build && npm publish"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "radix-ui": "^1.8.1"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@biomejs/biome": "^2.6.8",
+    "@changesets/cli": "^3.0.3",
+    "@storybook/react-vite": "^10.6.8",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.13",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "happy-dom": "^21.0.4",
+    "publint": "^0.3.25",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "storybook": "^10.6.8",
+    "tsdown": "^0.23.7",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
+  }
+}

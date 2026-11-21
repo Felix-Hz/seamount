@@ -1,0 +1,49 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+concurrency: release
+
+permissions:
+  contents: write
+  pull-requests: write
+  # npm trusted publishing: the registry exchanges this OIDC token for a one-off publish credential
+  id-token: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      # Trusted publishing needs npm 11.5.1 or later
+      - run: npm install -g npm@^11.5.1
+      - run: pnpm install --frozen-lockfile
+      # Opens the "version packages" PR while changesets are pending
+      - id: changesets
+        uses: changesets/action@v2
+        with:
+          version: pnpm changeset version
+          commit: "chore: version-packages"
+          title: "chore: version-packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # With none pending, publish the version in package.json unless npm already has it
+      - name: Publish
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        run: |
+          version=$(node -p "require('./package.json').version")
+          if npm view "@felix-hz/seamount@${version}" version >/dev/null 2>&1; then
+            echo "${version} is already on npm"
+            exit 0
+          fi
+          pnpm release
+          git tag "v${version}"
+          git push origin "v${version}"

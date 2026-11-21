@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-NZ">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seamount, no React</title>
+    <!-- After pnpm build; in an app, copy dist/css and dist/fonts side by side -->
+    <link rel="stylesheet" href="../dist/css/seamount.css">
+    <style>
+      main { max-width: 40rem; margin: 3rem auto; padding: 0 1rem; display: grid; gap: 3.5rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="sm-section">
+        <div class="sm-section-head">
+          <span class="sm-label" data-tone="accent">[&nbsp;01&nbsp;]</span>
+          <h2 class="sm-section-title">Power</h2>
+          <span class="sm-live sm-label" style="margin-left:auto"><span class="sm-square"></span>Live · every 5 s</span>
+        </div>
+        <div class="sm-row">
+          <div class="sm-row-text">
+            <label class="sm-row-name" for="limit">Stop charging at</label>
+            <p class="sm-row-help">60% suits a laptop that stays plugged in.</p>
+          </div>
+          <fieldset class="sm-segmented" style="margin:0">
+            <legend style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">Charge limit</legend>
+            <button type="button" class="sm-segmented-item" aria-pressed="false" data-state="off">60%</button>
+            <button type="button" class="sm-segmented-item" aria-pressed="true" data-state="on">80%</button>
+            <button type="button" class="sm-segmented-item" aria-pressed="false" data-state="off">100%</button>
+          </fieldset>
+        </div>
+        <div class="sm-row">
+          <div class="sm-row-text">
+            <div class="sm-row-name">Cooler Boost</div>
+            <p class="sm-row-help">Fans at full speed until turned off.</p>
+            <p class="sm-row-state" data-tone="accent">MSI Center turned this off 2 min ago.</p>
+          </div>
+          <button type="button" class="sm-switch" role="switch" aria-checked="true" data-state="checked" aria-label="Cooler Boost">
+            <span class="sm-switch-thumb"></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="sm-section">
+        <div class="sm-section-head">
+          <span class="sm-label" data-tone="accent">[&nbsp;02&nbsp;]</span>
+          <h2 class="sm-section-title">Machine</h2>
+        </div>
+        <dl class="sm-spec" style="margin-top:1rem">
+          <div><dt>CPU</dt><dd>Intel Core i9-14900HX, 24 cores</dd></div>
+          <div><dt>Memory</dt><dd>32 GB</dd></div>
+          <div><dt>Disk</dt><dd>479 GB, 61% used</dd></div>
+        </dl>
+      </section>
+
+      <div class="sm-field">
+        <label class="sm-field-label" for="interval">Sample interval</label>
+        <input class="sm-input" id="interval" data-figures value="0" aria-invalid="true" aria-describedby="interval-error">
+        <p class="sm-field-error" id="interval-error">Enter 1 to 3,600 seconds.</p>
+      </div>
+
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+        <button type="button" class="sm-button" data-variant="primary">Apply preset</button>
+        <button type="button" class="sm-button">Export</button>
+        <button type="button" class="sm-button" data-variant="destructive">Uninstall</button>
+      </div>
+
+      <div class="sm-toast" data-kind="success" role="status">
+        <span class="sm-toast-tag">[&nbsp;OK&nbsp;]</span>
+        <div class="sm-toast-body"><p class="sm-toast-title">Applied Gaming. 3 changes.</p></div>
+        <button type="button" class="sm-toast-action">Undo</button>
+      </div>
+    </main>
+  </body>
+</html>
