@@ -1,0 +1,19 @@
+import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+import * as Stories from "./use-hotkey.stories";
+
+<Meta of={Stories} />
+
+# useHotkey
+
+Runs a handler for a single key. It ignores Ctrl, Cmd and Alt combinations, and keys typed in a field unless `inFields` is set.
+
+```tsx
+useHotkey("k", () => openSearch());
+```
+
+<Canvas of={Stories.Default} />
+
+| Option | Type | Purpose |
+| --- | --- | --- |
+| `enabled` | `boolean` | Turns the hotkey on or off |
+| `inFields` | `boolean` | Also fires while typing in a field |

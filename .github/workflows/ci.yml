@@ -27,6 +27,8 @@ jobs:
       - run: pnpm lint
       - run: pnpm typecheck
       - run: pnpm test
+      - run: pnpm exec playwright install --with-deps --only-shell chromium
+      - run: pnpm test:storybook
       - run: pnpm build
       - run: pnpm check:package
       - run: pnpm storybook:build

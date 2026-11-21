@@ -1,0 +1,15 @@
+import { Canvas, Meta } from "@storybook/addon-docs/blocks";
+import * as Stories from "./use-field.stories";
+
+<Meta of={Stories} />
+
+# useField
+
+Connects a custom control to the surrounding `Field`. `useField` returns the field's IDs and state, or `null` outside a `Field`. `useFieldControlProps` returns the `id` and ARIA attributes to spread on the control.
+
+```tsx
+const props = useFieldControlProps({});
+return <input {...props} />;
+```
+
+<Canvas of={Stories.Default} />
